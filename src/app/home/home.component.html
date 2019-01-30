@@ -19,9 +19,21 @@
       </form>
   </div>
 
-  <div class="col">
-    <p class="life-container" *ngFor="let o of this.activiteService.objectifs; let i = index " (click)="this.myRouter.navigate(['consultAct/'+i]);">
-      {{o}}
-    </p>
-  </div>
+
+</div>
+<div class="container color-dark list" [@this.activiteService.objectifs]="this.activiteService.objectifs.length">
+ 
+      <div class="row">
+        <div  *ngFor="let o of this.activiteService.objectifs; let i = index " (click)="this.myRouter.navigate(['consultAct/'+i]);" class="card border-primary mb-3" style="max-width: 18rem;">
+          <div class="card-header">Activite : {{i}}</div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">{{o}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+             
+      
+      
+      
 </div>
