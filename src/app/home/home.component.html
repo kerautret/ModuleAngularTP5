@@ -17,13 +17,14 @@
       </form>
   </div>
   <div class="col">  
-  
+      <textarea type="text" class="form-control" rows="3" name="item" placeholder="Entrer la description ici" [(ngModel)]="descriptionActivite"></textarea>
+
   </div>
 </div>
 <div class="container color-dark list" [@this.activiteService.objectifs]="this.activiteService.objectifs.length">
       <div class="row">
 
-     <app-activite [monTitre]="o" [monNumero]="i" *ngFor="let o of this.activiteService.objectifs; let i = index " (click)="this.myRouter.navigate(['consultAct/'+i]);" class="card border-primary mb-3" style="max-width: 18rem;" ></app-activite>
+     <app-activite [maDescription]="'test ma description'" [monTitre]="o" [monNumero]="i" *ngFor="let o of this.activiteService.objectifs; let i = index " (click)="this.myRouter.navigate(['consultAct/'+i]);" class="card border-primary mb-3" style="max-width: 18rem;" ></app-activite>
   </div>
              
       

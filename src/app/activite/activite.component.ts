@@ -8,7 +8,9 @@ import { ActiviteService } from '../services/activite.service';
 })
 export class ActiviteComponent implements OnInit {
   @Input() monTitre:string;
-  @Input() monNumero:string;
+  @Input() monNumero:number;
+  @Input() maDescription:string;
+
   constructor(public activiteService: ActiviteService) { }
 
   ngOnInit() {
